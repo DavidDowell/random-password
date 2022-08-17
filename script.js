@@ -24,23 +24,23 @@ function generatePassword() {
         click = parseInt(prompt('The range is from 8 to 128 characters.'))
     } else {
         if (confirm('Would you like to include numbers?')) {
-            choices.push(randomNumber)
+            choices.push(randomNumber);
         }
         if (confirm('Would you like to include lower case letters?')) {
-            choices.push(randomLowerCase)
+            choices.push(randomLowerCase);
         }
         if (confirm('Would you like to include upper case letters?')) {
-            choices.push(randomUpperCase)
+            choices.push(randomUpperCase);
         }
         if(confirm('Would you like to include special characters?')) {
-            choices.push(randomSpecialChar)
-        }
-
-        if (choices.length == 0) {
-            alert('You must choose a valid option')
-        }
+            choices.push(randomSpecialChar);
+        } 
     }
-
+    
+    if (choices.length == 0) {
+        alert('You must choose a valid option');
+        return;
+    }
 
 
 
